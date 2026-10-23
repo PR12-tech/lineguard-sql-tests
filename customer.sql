@@ -8,7 +8,7 @@ CREATE TABLE products (
     name VARCHAR(150) NOT NULL,
     description VARCHAR(500),
     category  INT,
-    price DECIMAL(10, 2) NOT NULL,
+    price INT NOT NULL,
      prices INT NOT NULL,
     stock_quantity INT DEFAULT 0,
     sku  INT UNIQUE,
