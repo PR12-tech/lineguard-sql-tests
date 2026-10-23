@@ -11,7 +11,7 @@ CREATE TABLE inventory_products (
     price INT NOT NULL,
     prices INT NOT NULL,
     sku  INT UNIQUE,
-    is_available BOOLEAN DEFAULT TRUE,
+    is_available BOOLEAN NOT NULL DEFAULT TRUE,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     brand VARCHAR(50),
 );
