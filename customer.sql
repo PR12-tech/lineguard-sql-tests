@@ -12,7 +12,8 @@ CREATE TABLE inventory_products (
     prices INT NOT NULL,
     sku  INT UNIQUE,
     is_available BOOLEAN DEFAULT TRUE,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    brand VARCHAR(50),
 );
 
 -- Insert sample inventory_products
