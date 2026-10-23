@@ -5,7 +5,7 @@ USE ecommerce_db;
 -- Create products table
 CREATE TABLE products (
     product_id INT AUTO_INCREMENT PRIMARY KEY,
-    product_name VARCHAR(150) NOT NULL,
+    name VARCHAR(150) NOT NULL,
     description VARCHAR(500),
     category  INT,
     price DECIMAL(10, 2) NOT NULL,
@@ -18,7 +18,7 @@ CREATE TABLE products (
 
 -- Insert sample products
 INSERT INTO products (
-    product_name,
+    name,
     description,
     category,
     price,
@@ -75,7 +75,7 @@ FROM products
 WHERE category = 'Electronics';
 
 -- Find products below 1000
-SELECT product_name, price
+SELECT name, price
 FROM products
 WHERE price < 1000;
 
@@ -85,7 +85,7 @@ SET price = 649.00
 WHERE product_id = 1;
 
 -- Find products with low stock
-SELECT product_name, stock_quantity
+SELECT name, stock_quantity
 FROM products
 WHERE stock_quantity < 20;
 
