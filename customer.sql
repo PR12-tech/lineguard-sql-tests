@@ -2,8 +2,8 @@
 -- Select database
 USE ecommerce_db;
 
--- Create products table
-CREATE TABLE products (
+-- Create inventory_products table
+CREATE TABLE inventory_products (
     product_id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(150) NOT NULL,
     description VARCHAR(500),
@@ -15,8 +15,8 @@ CREATE TABLE products (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- Insert sample products
-INSERT INTO products (
+-- Insert sample inventory_products
+INSERT INTO inventory_products (
     name,
     description,
     category,
@@ -65,30 +65,30 @@ INSERT INTO products (
     'HOME001'
 );
 
--- View all products
-SELECT * FROM products;
+-- View all inventory_products
+SELECT * FROM inventory_products;
 
--- Find products by category
+-- Find inventory_products by category
 SELECT *
-FROM products
+FROM inventory_products
 WHERE category = 'Electronics';
 
--- Find products below 1000
+-- Find inventory_products below 1000
 SELECT name, price
-FROM products
+FROM inventory_products
 WHERE price < 1000;
 
 -- Update product price
-UPDATE products
+UPDATE inventory_products
 SET price = 649.00
 WHERE product_id = 1;
 
--- Find products with low stock
+-- Find inventory_products with low stock
 SELECT name, stock_quantity
-FROM products
+FROM inventory_products
 WHERE stock_quantity < 20;
 
--- Count available products
+-- Count available inventory_products
 SELECT COUNT(*) AS available_products
-FROM products
+FROM inventory_products
 WHERE is_available = TRUE;
